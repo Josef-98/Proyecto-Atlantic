@@ -1,43 +1,51 @@
-# Astro Starter Kit: Minimal
+# Atlantic Marine
 
-```sh
-npm create astro@latest -- --template minimal
+Web corporativa de **Atlantic Marine**, un astillero naval con sede en Venezuela.
+Sitio estático, rápido y accesible, pensado para dar presencia profesional al
+astillero y servir como catálogo de su flota y servicios.
+
+> 🚧 **DEMO — contenido de ejemplo.** Esta es una versión de prueba (POC) con textos
+> genéricos y fotos de stock con licencia libre. El contenido real se incorporará
+> tras la aprobación del cliente.
+
+## Stack
+
+- **[Astro](https://astro.build)** — framework de contenido estático (cero JS por defecto).
+- **[Tailwind CSS](https://tailwindcss.com)** — estilos mediante clases utilitarias.
+- **TypeScript** — en modo `strict`.
+- **Vercel** — despliegue.
+
+## Objetivos de calidad
+
+- ⚡ **Rendimiento** como requisito (no lujo): conexiones lentas en Venezuela. Meta LCP < 2,5 s.
+- ♿ **Accesibilidad** de serie: contraste AA, navegación por teclado, texto alternativo.
+- 🌐 Arquitectura preparada para **bilingüe ES/EN** sin reescritura.
+- 🧱 Contenido separado del código, para actualizarlo sin tocar la lógica.
+
+## Cómo arrancar en local
+
+Requisitos: [Node.js](https://nodejs.org) 22.12 o superior.
+
+```bash
+# 1. Instalar dependencias
+npm install
+
+# 2. Levantar el servidor de desarrollo
+npm run dev
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Luego abre **http://localhost:4321** en tu navegador. Los cambios se recargan solos.
 
-## 🚀 Project Structure
+| Comando | Acción |
+|---|---|
+| `npm run dev` | Servidor de desarrollo en `localhost:4321` |
+| `npm run build` | Construye la web final en `dist/` |
+| `npm run preview` | Previsualiza la build de producción en local |
 
-Inside of your Astro project, you'll see the following folders and files:
+## Estructura del sitio
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+`Inicio` · `Servicios` · `Flota / Proyectos` · `Sobre nosotros` · `Contacto`
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+---
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Proyecto de aprendizaje de desarrollo web. Construido con [Astro](https://astro.build).
