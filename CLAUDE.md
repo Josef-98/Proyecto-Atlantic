@@ -49,8 +49,10 @@ Astro + Tailwind CSS + TypeScript. Deploy en Vercel. Repo público en GitHub
 
 ## Restricciones no negociables
 
-- **Rendimiento = requisito, no lujo.** Conexiones lentas e inestables en Venezuela.
-  Objetivo LCP < 2,5 s. JS al mínimo. Imágenes optimizadas y en formato moderno.
+- **Rendimiento como parte del craft.** Las webs top del mundo son rápidas; la nuestra
+  también. No es un tema de "conexión en Venezuela", es calidad profesional. Objetivo
+  LCP < 2,5 s. JS solo donde aporte a la experiencia (islands de Astro), nunca por
+  defecto. Imágenes optimizadas y en formato moderno.
 - **Accesibilidad de serie:** contraste AA, navegación por teclado, alt text, áreas
   táctiles grandes. No como parche al final.
 - **Contenido separado del código** en `src/content/` (o similar). Cuando llegue el
