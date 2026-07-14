@@ -1,1 +1,19 @@
 @import "tailwindcss";
+
+/* ==========================================================================
+   Sistema de diseño — Atlantic Marine
+   Dirección: oscura, industrial, sobria. Navy / grafito / acero.
+   Definir un token aquí crea sus utilidades (ej. --color-ink → bg-ink, text-ink).
+   ========================================================================== */
+@theme {
+  /* Colores */
+  --color-ink: #0b1220;      /* Fondo base (navy-grafito profundo) */
+  --color-surface: #141b26;  /* Paneles y tarjetas */
+  --color-line: #2c3849;     /* Bordes y separadores */
+  --color-steel: #64748b;    /* Texto secundario, detalles de acero */
+  --color-fog: #e7ecf2;      /* Texto principal (blanco roto, no puro) */
+  --color-accent: #3e7ca6;   /* Acento frío: enlaces y CTA. Muy contenido */
+
+  /* Tipografía: Inter como fuente única (sobria, industrial). */
+  --font-sans: "Inter Variable", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+}
