@@ -24,14 +24,15 @@ el contenido de ejemplo por el real cuando lo pase el padre de Josef.
 4. **Nuestros buques / flota** (tarjetas de barco) — ⬜ siguiente · *corazón del sitio*
 5. **What makes us different** (iconos — estilo distinto, da respiro) — ⬜
 6. **Nuestro compromiso** (tarjetas con foto) — ⬜
-7. Footer (marca + navegación + copyright, **sin** dirección) — ⬜
+7. Footer (marca + zona "Ciudad Ojeda, Zulia" + navegación + copyright) — ✅
 
 Idea: alternar estilos (foto → barcos → iconos → foto) para que no se sienta repetido.
 
 ## Decisiones pendientes / NO olvidar
 
-- **Mapa de Google + dirección → SOLO en la página de CONTACTO** (no en la home ni en
-  el footer). El mapa se monta en Fase B; evaluar incrustado vs. versión ligera.
+- **Mapa de Google + dirección EXACTA → solo en CONTACTO.** El footer sí muestra la
+  zona general (Ciudad Ojeda, Estado Zulia) como contexto rápido, pero no la calle. El
+  mapa se monta en Fase B; evaluar incrustado vs. versión ligera.
 - **Versión móvil / responsive:** pasada dedicada + menú hamburguesa (Fase C).
 - **WhatsApp:** interruptor en `src/config/site.ts`, hoy apagado; se decide con el
   padre de Josef.

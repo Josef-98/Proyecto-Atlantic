@@ -4,6 +4,9 @@
 export const site = {
   name: 'Atlantic Marine',
 
+  // Zona (ciudad/estado) para contexto rápido. La dirección exacta va solo en Contacto.
+  location: 'Ciudad Ojeda · Estado Zulia, Venezuela',
+
   // Teléfono (contenido de ejemplo). display = lo que se ve; href = para el enlace tel:
   phone: {
     display: '+58 281 555 0100',
