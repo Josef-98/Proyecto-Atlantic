@@ -1,0 +1,42 @@
+---
+// Qué nos diferencia: icono + título + frase. Iconos SVG en línea (sin librería).
+import { site } from '../config/site';
+
+// Cada clave es el interior de un <svg> de línea (estilo Lucide, 24x24).
+const icons: Record<string, string> = {
+  clock: '<circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>',
+  compass:
+    '<circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/>',
+  check: '<circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/>',
+  message: '<path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>',
+};
+---
+
+<section class="border-t border-line">
+  <div class="mx-auto max-w-6xl px-6 py-20 sm:py-28">
+    <p class="text-xs uppercase tracking-[0.25em] text-accent">Por qué nosotros</p>
+    <h2 class="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl">Qué nos diferencia</h2>
+
+    <div class="mt-12 grid grid-cols-1 gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-4">
+      {
+        site.differentiators.map((item) => (
+          <div>
+            <svg
+              class="h-8 w-8 text-accent"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+              set:html={icons[item.icon]}
+            />
+            <h3 class="mt-5 text-lg font-semibold text-fog">{item.title}</h3>
+            <p class="mt-2 text-sm leading-relaxed text-steel">{item.text}</p>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

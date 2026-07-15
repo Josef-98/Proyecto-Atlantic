@@ -62,4 +62,12 @@ export const site = {
     { name: 'Isla Margarita', type: 'Portacontenedores', spec: 'Eslora 135 m · 2022' },
     { name: 'Cardón', type: 'Granelero', spec: 'Eslora 120 m · 2018' },
   ],
+
+  // Qué nos diferencia (contenido de ejemplo). "icon" referencia un SVG del componente.
+  differentiators: [
+    { icon: 'clock', title: '35 años de trayectoria', text: 'Décadas construyendo y reparando buques en Venezuela.' },
+    { icon: 'compass', title: 'Ingeniería propia', text: 'Diseño y departamento de ingeniería en casa, de principio a fin.' },
+    { icon: 'check', title: 'Cumplimiento de plazos', text: 'Entregas en tiempo y forma, con seguimiento en cada fase.' },
+    { icon: 'message', title: 'Trato cercano', text: 'Comunicación directa y un interlocutor para todo el proyecto.' },
+  ],
 };
