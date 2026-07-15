@@ -26,4 +26,12 @@ export const site = {
     { label: 'Sobre nosotros', href: '/sobre-nosotros' },
     { label: 'Contacto', href: '/contacto' },
   ],
+
+  // Contadores de credibilidad de la home (datos de ejemplo).
+  stats: [
+    { value: '35', label: 'Años de trayectoria' },
+    { value: '120', label: 'Buques construidos' },
+    { value: '480', label: 'Reparaciones realizadas' },
+    { value: '60', label: 'Clientes satisfechos' },
+  ],
 };
