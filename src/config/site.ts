@@ -34,4 +34,24 @@ export const site = {
     { value: '480', label: 'Reparaciones realizadas' },
     { value: '60', label: 'Clientes satisfechos' },
   ],
+
+  // Servicios (contenido de ejemplo): titular corto + una frase.
+  services: [
+    {
+      title: 'Construcción naval',
+      description: 'Diseño y construcción de buques a medida, del proyecto a la botadura.',
+    },
+    {
+      title: 'Reparación y mantenimiento',
+      description: 'Reparaciones integrales y mantenimiento preventivo para mantener tu flota operativa.',
+    },
+    {
+      title: 'Conversión y modernización',
+      description: 'Transformación y actualización de buques para nuevos usos y normativas.',
+    },
+    {
+      title: 'Servicios en dique seco',
+      description: 'Varada en dique seco para inspección de casco, obra viva y certificaciones.',
+    },
+  ],
 };
