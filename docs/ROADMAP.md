@@ -24,15 +24,14 @@ el contenido de ejemplo por el real cuando lo pase el padre de Josef.
 4. **Nuestros buques / flota** (tarjetas de barco) — ⬜ siguiente · *corazón del sitio*
 5. **What makes us different** (iconos — estilo distinto, da respiro) — ⬜
 6. **Nuestro compromiso** (tarjetas con foto) — ⬜
-7. Footer + dirección — ⬜
+7. Footer (marca + navegación + copyright, **sin** dirección) — ⬜
 
 Idea: alternar estilos (foto → barcos → iconos → foto) para que no se sienta repetido.
 
 ## Decisiones pendientes / NO olvidar
 
-- **Mapa de Google + dirección → en la página de CONTACTO, no en la home.** La
-  dirección irá también en el footer (visible en todas las páginas). El mapa se monta
-  en Fase B; evaluar incrustado vs. versión ligera.
+- **Mapa de Google + dirección → SOLO en la página de CONTACTO** (no en la home ni en
+  el footer). El mapa se monta en Fase B; evaluar incrustado vs. versión ligera.
 - **Versión móvil / responsive:** pasada dedicada + menú hamburguesa (Fase C).
 - **WhatsApp:** interruptor en `src/config/site.ts`, hoy apagado; se decide con el
   padre de Josef.
