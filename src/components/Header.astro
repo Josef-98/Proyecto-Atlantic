@@ -1,10 +1,10 @@
 ---
 // Cabecera común: logo (vuelve al inicio) + navegación.
-// Los datos vienen del archivo de contenido, no van escritos aquí.
+// Se posiciona en absoluto para superponerse sobre el hero.
 import { site } from '../config/site';
 ---
 
-<header>
+<header class="absolute inset-x-0 top-0 z-50">
   <div class="mx-auto flex max-w-6xl items-center justify-between gap-6 px-6 py-6">
     <!-- Logo / nombre: único sitio donde aparece el nombre; enlaza a la home -->
     <a
@@ -20,7 +20,7 @@ import { site } from '../config/site';
         site.nav.map((item) => (
           <a
             href={item.href}
-            class="text-xs uppercase tracking-[0.15em] text-steel transition-colors hover:text-fog"
+            class="text-xs uppercase tracking-[0.15em] text-fog/85 transition-colors hover:text-fog"
           >
             {item.label}
           </a>

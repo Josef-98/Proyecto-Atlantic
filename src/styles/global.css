@@ -12,7 +12,7 @@
   --color-line: #2c3849;     /* Bordes y separadores */
   --color-steel: #64748b;    /* Texto secundario, detalles de acero */
   --color-fog: #e7ecf2;      /* Texto principal (blanco roto, no puro) */
-  --color-accent: #3e7ca6;   /* Acento frío: enlaces y CTA. Muy contenido */
+  --color-accent: #6ba6d1;   /* Acento frío: enlaces y CTA. Sobrio pero legible */
 
   /* Tipografía: Inter como fuente única (sobria, industrial). */
   --font-sans: "Inter Variable", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;

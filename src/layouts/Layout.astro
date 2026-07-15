@@ -32,9 +32,12 @@ const {
       <span class="font-semibold text-accent">DEMO</span> — contenido de ejemplo
     </div>
 
-    <Header />
+    <!-- Contenedor relativo: la cabecera (absoluta) se superpone sobre el contenido. -->
+    <div class="relative">
+      <Header />
 
-    <!-- Aquí se inserta el contenido propio de cada página. -->
-    <slot />
+      <!-- Aquí se inserta el contenido propio de cada página. -->
+      <slot />
+    </div>
   </body>
 </html>

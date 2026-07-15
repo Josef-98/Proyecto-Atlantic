@@ -1,17 +1,38 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import heroImg from '../assets/hero-dique-seco.jpg';
 ---
 
 <Layout>
-  <main class="mx-auto max-w-6xl px-6 pb-32 pt-16 sm:pt-24">
-    <p class="text-xs uppercase tracking-[0.25em] text-accent">
-      Astillero naval · Venezuela
-    </p>
-    <h1 class="mt-6 max-w-3xl text-5xl font-semibold leading-[1.05] tracking-tight sm:text-6xl">
-      Construcción y reparación de buques
-    </h1>
-    <p class="mt-6 max-w-xl text-lg leading-relaxed text-steel">
-      Contenido de ejemplo del hero — aquí irá el mensaje principal del astillero.
-    </p>
-  </main>
+  <!-- HERO: imagen a pantalla casi completa con el texto encima -->
+  <section class="relative flex min-h-[88vh] items-end overflow-hidden">
+    <!-- Foto de fondo (optimizada por Astro). eager porque es lo primero que se ve. -->
+    <Image
+      src={heroImg}
+      alt="Buque en dique seco en un astillero"
+      class="absolute inset-0 h-full w-full object-cover"
+      loading="eager"
+    />
+
+    <!-- Capas oscuras: legibilidad del texto y fundido con el fondo de la página -->
+    <div class="absolute inset-0 bg-ink/40"></div>
+    <!-- Scrim superior: oscurece la franja de la cabecera para que el menú se lea -->
+    <div class="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-ink/85 to-transparent"></div>
+    <!-- Degradado inferior: ancla el texto del hero y funde con la página -->
+    <div class="absolute inset-0 bg-gradient-to-t from-ink via-ink/70 to-transparent"></div>
+
+    <!-- Contenido del hero (text-shadow para legibilidad sobre la foto) -->
+    <div class="relative mx-auto w-full max-w-6xl px-6 pb-20 sm:pb-28 [text-shadow:0_1px_3px_rgb(0_0_0/0.55)]">
+      <p class="text-xs uppercase tracking-[0.25em] text-accent">
+        Astillero naval · Venezuela
+      </p>
+      <h1 class="mt-6 max-w-3xl text-5xl font-semibold leading-[1.05] tracking-tight sm:text-6xl">
+        Construcción y reparación de buques
+      </h1>
+      <p class="mt-6 max-w-xl text-lg leading-relaxed text-fog/80">
+        Contenido de ejemplo del hero — aquí irá el mensaje principal del astillero.
+      </p>
+    </div>
+  </section>
 </Layout>
