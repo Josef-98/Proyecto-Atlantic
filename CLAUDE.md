@@ -55,6 +55,9 @@ Astro + Tailwind CSS + TypeScript. Deploy en Vercel. Repo público en GitHub
   defecto. Imágenes optimizadas y en formato moderno.
 - **Accesibilidad de serie:** contraste AA, navegación por teclado, alt text, áreas
   táctiles grandes. No como parche al final.
+- **Responsive / móvil (PENDIENTE — no olvidar):** la web debe verse impecable en
+  móvil. Habrá una pasada dedicada de responsive + menú hamburguesa tras montar la
+  estructura de escritorio.
 - **Contenido separado del código** en `src/content/` (o similar). Cuando llegue el
   contenido real, debe cambiarse sin tocar código.
 - **Preparado para bilingüe ES/EN** sin reescritura. El POC sale solo en español.
