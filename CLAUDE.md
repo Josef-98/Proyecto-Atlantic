@@ -41,6 +41,8 @@ ecosistema web**.
   navegador abierto en `localhost`, para que Josef vea cada cambio en vivo.
 - **Desplegar (Vercel) va después:** primero construir y pulir en local; el deploy
   llega cuando Josef esté contento con lo que ve.
+- **Plan de trabajo vivo:** las fases, el orden de secciones de la home y las
+  decisiones pendientes están en `docs/ROADMAP.md`. Consultarlo y mantenerlo al día.
 
 ## Stack
 
