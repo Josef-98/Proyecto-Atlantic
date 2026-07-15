@@ -2,6 +2,7 @@
 // Fuente Inter (autohospedada) + estilos globales con nuestros tokens de diseño.
 import '@fontsource-variable/inter';
 import '../styles/global.css';
+import Header from '../components/Header.astro';
 
 // Props que cada página puede pasarle al layout. Con valores por defecto.
 interface Props {
@@ -30,6 +31,8 @@ const {
     <div class="border-b border-line bg-surface px-4 py-2 text-center text-xs tracking-wide text-steel">
       <span class="font-semibold text-accent">DEMO</span> — contenido de ejemplo
     </div>
+
+    <Header />
 
     <!-- Aquí se inserta el contenido propio de cada página. -->
     <slot />
