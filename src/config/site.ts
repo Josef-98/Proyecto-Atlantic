@@ -70,4 +70,11 @@ export const site = {
     { icon: 'check', title: 'Cumplimiento de plazos', text: 'Entregas en tiempo y forma, con seguimiento en cada fase.' },
     { icon: 'message', title: 'Trato cercano', text: 'Comunicación directa y un interlocutor para todo el proyecto.' },
   ],
+
+  // Nuestro compromiso (contenido de ejemplo): tarjetas con foto.
+  commitment: [
+    { title: 'Calidad', text: 'Mejora continua en materiales, procesos, tecnología y servicio.' },
+    { title: 'Seguridad y salud', text: 'La seguridad de nuestro equipo es el valor fundamental de cada proyecto.' },
+    { title: 'Sostenibilidad', text: 'Contribuimos a preservar nuestro entorno social y natural.' },
+  ],
 };

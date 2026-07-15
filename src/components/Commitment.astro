@@ -1,0 +1,39 @@
+---
+// Nuestro compromiso: tarjetas con foto + título + frase + "Más info".
+import { Image } from 'astro:assets';
+import { site } from '../config/site';
+
+import calidad from '../assets/compromiso-calidad.jpg';
+import seguridad from '../assets/compromiso-seguridad.jpg';
+import sostenibilidad from '../assets/compromiso-sostenibilidad.jpg';
+
+// Imágenes en el mismo orden que site.commitment.
+const images = [calidad, seguridad, sostenibilidad];
+---
+
+<section class="border-t border-line">
+  <div class="mx-auto max-w-6xl px-6 py-20 sm:py-28">
+    <p class="text-xs uppercase tracking-[0.25em] text-accent">Nuestro compromiso</p>
+    <h2 class="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl">Compromiso</h2>
+
+    <div class="mt-12 grid grid-cols-1 gap-6 md:grid-cols-3">
+      {
+        site.commitment.map((item, i) => (
+          <article class="group overflow-hidden rounded-lg border border-line bg-surface transition-colors hover:border-steel">
+            <div class="aspect-[16/10] overflow-hidden">
+              <Image
+                src={images[i]}
+                alt={item.title}
+                class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-lg font-semibold text-fog">{item.title}</h3>
+              <p class="mt-2 text-sm leading-relaxed text-steel">{item.text}</p>
+            </div>
+          </article>
+        ))
+      }
+    </div>
+  </div>
+</section>
