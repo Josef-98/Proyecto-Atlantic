@@ -1,0 +1,37 @@
+---
+// Fuente Inter (autohospedada) + estilos globales con nuestros tokens de diseño.
+import '@fontsource-variable/inter';
+import '../styles/global.css';
+
+// Props que cada página puede pasarle al layout. Con valores por defecto.
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = 'Atlantic Marine — Astillero naval en Venezuela',
+  description = 'Astillero naval en Venezuela: construcción y reparación de buques.',
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+  </head>
+  <body class="min-h-screen bg-ink font-sans text-fog antialiased">
+    <!-- Banner DEMO: deja claro que el contenido es de ejemplo mientras sea POC. -->
+    <div class="border-b border-line bg-surface px-4 py-2 text-center text-xs tracking-wide text-steel">
+      <span class="font-semibold text-accent">DEMO</span> — contenido de ejemplo
+    </div>
+
+    <!-- Aquí se inserta el contenido propio de cada página. -->
+    <slot />
+  </body>
+</html>
