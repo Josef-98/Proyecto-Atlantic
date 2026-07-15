@@ -1,0 +1,54 @@
+---
+// Nuestra flota: tarjetas de buque (foto + nombre + tipo + ficha).
+// Textos desde el archivo de contenido; imágenes importadas aquí (astro:assets).
+import { Image } from 'astro:assets';
+import { site } from '../config/site';
+
+import flota01 from '../assets/flota-01.jpg';
+import flota02 from '../assets/flota-02.jpg';
+import flota03 from '../assets/flota-03.jpg';
+import flota04 from '../assets/flota-04.jpg';
+
+// Imágenes en el mismo orden que site.fleet.
+const images = [flota01, flota02, flota03, flota04];
+---
+
+<section class="border-t border-line">
+  <div class="mx-auto max-w-6xl px-6 py-20 sm:py-28">
+    <div class="flex items-end justify-between gap-6">
+      <div>
+        <p class="text-xs uppercase tracking-[0.25em] text-accent">Portfolio</p>
+        <h2 class="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl">Nuestra flota</h2>
+      </div>
+      <a
+        href="/flota"
+        class="hidden items-center gap-1 text-sm font-medium text-accent transition-colors hover:text-fog sm:inline-flex"
+      >
+        Ver todos <span aria-hidden="true">→</span>
+      </a>
+    </div>
+
+    <div class="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+      {
+        site.fleet.map((ship, i) => (
+          <article class="group overflow-hidden rounded-lg border border-line bg-surface transition-colors hover:border-steel">
+            <div class="aspect-[4/3] overflow-hidden">
+              <Image
+                src={images[i]}
+                alt={`${ship.name}, ${ship.type}`}
+                class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+            </div>
+            <div class="p-5">
+              <h3 class="text-base font-semibold uppercase tracking-wide text-fog">
+                {ship.name}
+              </h3>
+              <p class="mt-1 text-sm text-accent">{ship.type}</p>
+              <p class="mt-1 text-xs text-steel">{ship.spec}</p>
+            </div>
+          </article>
+        ))
+      }
+    </div>
+  </div>
+</section>

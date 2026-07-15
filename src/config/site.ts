@@ -54,4 +54,12 @@ export const site = {
       description: 'Varada en dique seco para inspección de casco, obra viva y certificaciones.',
     },
   ],
+
+  // Flota / portfolio de buques (contenido de ejemplo): nombre + tipo + ficha corta.
+  fleet: [
+    { name: 'Guaicamacuto', type: 'Buque tanque', spec: 'Eslora 92 m · 2021' },
+    { name: 'Río Orinoco', type: 'Carguero', spec: 'Eslora 110 m · 2019' },
+    { name: 'Isla Margarita', type: 'Portacontenedores', spec: 'Eslora 135 m · 2022' },
+    { name: 'Cardón', type: 'Granelero', spec: 'Eslora 120 m · 2018' },
+  ],
 };
