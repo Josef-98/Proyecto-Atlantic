@@ -8,9 +8,17 @@
 **Fase A — Home completa (contenido de ejemplo)** ← en curso
 Montar todas las secciones de la home con contenido falso nuestro.
 
-**Fase B — Sitio navegable**
+**Fase B — Sitio navegable** ← en curso
 Crear las páginas del menú (Servicios · Flota · Sobre nosotros · Contacto) para que
 no den 404. Menú hamburguesa (móvil) + botón flotante de WhatsApp (apagado).
+
+Progreso:
+- `/flota` ✅ (catálogo; cada buque abre su ficha en un modal centrado)
+- `/servicios` ✅ (servicios detallados, filas alternadas, fotos enmarcadas)
+- `/sobre-nosotros` ⬜
+- `/contacto` ⬜ (con el mapa)
+- Menú hamburguesa (móvil) ⬜
+- Botón flotante de WhatsApp ⬜
 
 **Fase C — Pulir y publicar**
 Repaso de diseño, accesibilidad y responsive. Deploy en Vercel. Después, sustituir
