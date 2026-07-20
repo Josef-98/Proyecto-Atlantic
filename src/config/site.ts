@@ -38,23 +38,56 @@ export const site = {
     { value: '60', label: 'Clientes satisfechos' },
   ],
 
-  // Servicios (contenido de ejemplo): titular corto + una frase.
+  // Servicios (contenido de ejemplo). "description" = frase corta para la home;
+  // "detail" e "includes" se muestran en la página /servicios.
   services: [
     {
       title: 'Construcción naval',
       description: 'Diseño y construcción de buques a medida, del proyecto a la botadura.',
+      detail:
+        'Acompañamos cada proyecto desde la ingeniería de detalle hasta la botadura y las pruebas de mar, con control de calidad en cada fase.',
+      includes: [
+        'Ingeniería y diseño de detalle',
+        'Corte y armado del casco',
+        'Instalación de sistemas y maquinaria',
+        'Pruebas de mar y entrega',
+      ],
     },
     {
       title: 'Reparación y mantenimiento',
       description: 'Reparaciones integrales y mantenimiento preventivo para mantener tu flota operativa.',
+      detail:
+        'Intervenciones programadas y de emergencia para minimizar el tiempo fuera de servicio y alargar la vida útil del buque.',
+      includes: [
+        'Reparación estructural y de casco',
+        'Mantenimiento de motores y sistemas',
+        'Trabajos de pintura y protección',
+        'Diagnóstico y peritaje',
+      ],
     },
     {
       title: 'Conversión y modernización',
       description: 'Transformación y actualización de buques para nuevos usos y normativas.',
+      detail:
+        'Adaptamos buques existentes a nuevas funciones, mercados o exigencias regulatorias, optimizando su rendimiento.',
+      includes: [
+        'Reacondicionamiento y ampliación',
+        'Actualización de equipos y automatización',
+        'Adaptación a normativa vigente',
+        'Mejoras de eficiencia energética',
+      ],
     },
     {
       title: 'Servicios en dique seco',
       description: 'Varada en dique seco para inspección de casco, obra viva y certificaciones.',
+      detail:
+        'Instalaciones de dique seco para trabajos de obra viva, inspecciones de clasificadora y certificaciones periódicas.',
+      includes: [
+        'Varada y puesta en seco',
+        'Inspección de obra viva',
+        'Limpieza y pintura de casco',
+        'Certificaciones de clasificadora',
+      ],
     },
   ],
 
