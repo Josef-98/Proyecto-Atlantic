@@ -1,0 +1,110 @@
+---
+// Rejilla de buques. Cada tarjeta abre un modal (<dialog>) con la ficha del buque.
+// Prop opcional "limit": nº de buques a mostrar (la home enseña un adelanto).
+import { Image } from 'astro:assets';
+import { site } from '../config/site';
+
+import flota01 from '../assets/flota-01.jpg';
+import flota02 from '../assets/flota-02.jpg';
+import flota03 from '../assets/flota-03.jpg';
+import flota04 from '../assets/flota-04.jpg';
+
+const images = [flota01, flota02, flota03, flota04];
+
+interface Props {
+  limit?: number;
+}
+const { limit } = Astro.props;
+const ships = limit ? site.fleet.slice(0, limit) : site.fleet;
+---
+
+<div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+  {
+    ships.map((ship, i) => (
+      <button
+        type="button"
+        data-ship-open={i}
+        class="group block cursor-pointer overflow-hidden rounded-lg border border-line bg-surface text-left transition-colors hover:border-steel focus:outline-none focus-visible:border-accent"
+      >
+        <div class="aspect-[4/3] overflow-hidden">
+          <Image
+            src={images[i]}
+            alt={`${ship.name}, ${ship.type}`}
+            class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+          />
+        </div>
+        <div class="p-5">
+          <h3 class="text-base font-semibold uppercase tracking-wide text-fog">{ship.name}</h3>
+          <p class="mt-1 text-sm text-accent">{ship.type}</p>
+          <p class="mt-1 text-xs text-steel">{ship.spec}</p>
+          <p class="mt-3 text-xs font-medium text-accent transition-colors group-hover:text-fog">
+            Ver ficha →
+          </p>
+        </div>
+      </button>
+    ))
+  }
+</div>
+
+{
+  ships.map((ship, i) => (
+    <dialog
+      id={`ship-${i}`}
+      class="m-auto max-h-[calc(100dvh-2rem)] w-[calc(100%-2rem)] max-w-lg overflow-hidden rounded-lg border border-line bg-surface p-0 text-fog backdrop:bg-black/70"
+    >
+      <div class="relative">
+        <Image
+          src={images[i]}
+          alt={`${ship.name}, ${ship.type}`}
+          class="aspect-[16/9] w-full object-cover"
+        />
+        <button
+          type="button"
+          data-close
+          aria-label="Cerrar ficha"
+          class="absolute right-3 top-3 flex h-9 w-9 items-center justify-center rounded-full bg-ink/70 text-lg text-fog transition-colors hover:bg-ink"
+        >
+          ✕
+        </button>
+      </div>
+      <div class="p-6">
+        <h3 class="text-xl font-semibold uppercase tracking-wide">{ship.name}</h3>
+        <p class="mt-1 text-sm text-accent">{ship.type}</p>
+        <p class="mt-4 text-sm leading-relaxed text-steel">{ship.description}</p>
+        <dl class="mt-6 grid grid-cols-2 gap-x-6 gap-y-4 border-t border-line pt-6">
+          {ship.specs.map((s) => (
+            <div>
+              <dt class="text-xs uppercase tracking-wide text-steel">{s.label}</dt>
+              <dd class="mt-1 text-sm text-fog">{s.value}</dd>
+            </div>
+          ))}
+        </dl>
+      </div>
+    </dialog>
+  ))
+}
+
+<script>
+  // Abrir el modal del buque al pulsar su tarjeta.
+  document.querySelectorAll<HTMLElement>('[data-ship-open]').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const id = btn.getAttribute('data-ship-open');
+      const dialog = document.getElementById(`ship-${id}`) as HTMLDialogElement | null;
+      dialog?.showModal();
+    });
+  });
+
+  // Cerrar con la X.
+  document.querySelectorAll<HTMLElement>('dialog [data-close]').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      (btn.closest('dialog') as HTMLDialogElement | null)?.close();
+    });
+  });
+
+  // Cerrar al pulsar fuera de la ficha (en el fondo oscuro).
+  document.querySelectorAll<HTMLDialogElement>('dialog').forEach((dialog) => {
+    dialog.addEventListener('click', (event) => {
+      if (event.target === dialog) dialog.close();
+    });
+  });
+</script>

@@ -1,16 +1,6 @@
 ---
-// Nuestra flota: tarjetas de buque (foto + nombre + tipo + ficha).
-// Textos desde el archivo de contenido; imágenes importadas aquí (astro:assets).
-import { Image } from 'astro:assets';
-import { site } from '../config/site';
-
-import flota01 from '../assets/flota-01.jpg';
-import flota02 from '../assets/flota-02.jpg';
-import flota03 from '../assets/flota-03.jpg';
-import flota04 from '../assets/flota-04.jpg';
-
-// Imágenes en el mismo orden que site.fleet.
-const images = [flota01, flota02, flota03, flota04];
+// Sección de flota en la home: cabecera + rejilla reutilizable + enlace "Ver todos".
+import FleetGrid from './FleetGrid.astro';
 ---
 
 <section class="border-t border-line">
@@ -28,27 +18,8 @@ const images = [flota01, flota02, flota03, flota04];
       </a>
     </div>
 
-    <div class="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-      {
-        site.fleet.map((ship, i) => (
-          <article class="group overflow-hidden rounded-lg border border-line bg-surface transition-colors hover:border-steel">
-            <div class="aspect-[4/3] overflow-hidden">
-              <Image
-                src={images[i]}
-                alt={`${ship.name}, ${ship.type}`}
-                class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-              />
-            </div>
-            <div class="p-5">
-              <h3 class="text-base font-semibold uppercase tracking-wide text-fog">
-                {ship.name}
-              </h3>
-              <p class="mt-1 text-sm text-accent">{ship.type}</p>
-              <p class="mt-1 text-xs text-steel">{ship.spec}</p>
-            </div>
-          </article>
-        ))
-      }
+    <div class="mt-12">
+      <FleetGrid limit={3} />
     </div>
   </div>
 </section>

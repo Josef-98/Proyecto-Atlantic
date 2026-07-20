@@ -58,12 +58,61 @@ export const site = {
     },
   ],
 
-  // Flota / portfolio de buques (contenido de ejemplo): nombre + tipo + ficha corta.
+  // Flota / portfolio de buques (contenido de ejemplo): nombre, tipo, ficha corta,
+  // descripción y especificaciones (se muestran al abrir la ficha del buque).
   fleet: [
-    { name: 'Guaicamacuto', type: 'Buque tanque', spec: 'Eslora 92 m · 2021' },
-    { name: 'Río Orinoco', type: 'Carguero', spec: 'Eslora 110 m · 2019' },
-    { name: 'Isla Margarita', type: 'Portacontenedores', spec: 'Eslora 135 m · 2022' },
-    { name: 'Cardón', type: 'Granelero', spec: 'Eslora 120 m · 2018' },
+    {
+      name: 'Guaicamacuto',
+      type: 'Buque tanque',
+      spec: 'Eslora 92 m · 2021',
+      description:
+        'Buque tanque para el transporte de productos petrolíferos refinados, con carga segregada y bombas de alto caudal.',
+      specs: [
+        { label: 'Eslora', value: '92 m' },
+        { label: 'Manga', value: '15 m' },
+        { label: 'Peso muerto', value: '6 500 DWT' },
+        { label: 'Entrega', value: '2021' },
+      ],
+    },
+    {
+      name: 'Río Orinoco',
+      type: 'Carguero',
+      spec: 'Eslora 110 m · 2019',
+      description:
+        'Carguero polivalente para carga general y proyectos, con bodegas amplias y grúas propias para operar en puertos sin infraestructura.',
+      specs: [
+        { label: 'Eslora', value: '110 m' },
+        { label: 'Manga', value: '18 m' },
+        { label: 'Peso muerto', value: '9 800 DWT' },
+        { label: 'Entrega', value: '2019' },
+      ],
+    },
+    {
+      name: 'Isla Margarita',
+      type: 'Portacontenedores',
+      spec: 'Eslora 135 m · 2022',
+      description:
+        'Portacontenedores feeder para rutas regionales del Caribe, optimizado para escalas rápidas y bajo consumo.',
+      specs: [
+        { label: 'Eslora', value: '135 m' },
+        { label: 'Manga', value: '22 m' },
+        { label: 'Capacidad', value: '1 100 TEU' },
+        { label: 'Entrega', value: '2022' },
+      ],
+    },
+    {
+      name: 'Cardón',
+      type: 'Granelero',
+      spec: 'Eslora 120 m · 2018',
+      description:
+        'Granelero para el transporte de graneles sólidos, con bodegas reforzadas y sistema de autodescarga.',
+      specs: [
+        { label: 'Eslora', value: '120 m' },
+        { label: 'Manga', value: '20 m' },
+        { label: 'Peso muerto', value: '12 000 DWT' },
+        { label: 'Entrega', value: '2018' },
+      ],
+    },
   ],
 
   // Qué nos diferencia (contenido de ejemplo). "icon" referencia un SVG del componente.

@@ -1,0 +1,19 @@
+---
+import Layout from '../layouts/Layout.astro';
+import FleetGrid from '../components/FleetGrid.astro';
+---
+
+<Layout title="Flota — Atlantic Marine">
+  <main class="mx-auto max-w-6xl px-6 pb-24 pt-32 sm:pt-40">
+    <p class="text-xs uppercase tracking-[0.25em] text-accent">Portfolio</p>
+    <h1 class="mt-4 text-4xl font-semibold tracking-tight sm:text-5xl">Nuestra flota</h1>
+    <p class="mt-6 max-w-2xl text-lg leading-relaxed text-steel">
+      Una selección de buques construidos y reparados en nuestros astilleros.
+      Contenido de ejemplo mientras preparamos el catálogo real.
+    </p>
+
+    <div class="mt-14">
+      <FleetGrid />
+    </div>
+  </main>
+</Layout>
