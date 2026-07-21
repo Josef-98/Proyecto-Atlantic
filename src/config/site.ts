@@ -162,4 +162,21 @@ export const site = {
     { title: 'Seguridad y salud', text: 'La seguridad de nuestro equipo es el valor fundamental de cada proyecto.' },
     { title: 'Sostenibilidad', text: 'Contribuimos a preservar nuestro entorno social y natural.' },
   ],
+
+  // Página "Sobre nosotros" (contenido de ejemplo).
+  about: {
+    headline: 'Más de tres décadas construyendo confianza',
+    lead: 'Somos un astillero naval en Ciudad Ojeda, a orillas del lago de Maracaibo. Combinamos oficio, ingeniería propia y un trato cercano para construir y reparar buques que aguantan el trabajo real.',
+    history: [
+      'Atlantic Marine nació en 1990 como un taller de reparación al servicio de la flota del lago. Con los años ampliamos instalaciones, sumamos dique seco e ingeniería propia, y dimos el salto a la construcción de buques completos.',
+      'Hoy, con más de 120 buques construidos y cientos de reparaciones, seguimos con la misma idea del primer día: entregar a tiempo, cumplir la palabra y estar cerca del armador.',
+    ],
+    milestones: [
+      { year: '1990', text: 'Fundación del astillero en Ciudad Ojeda.' },
+      { year: '2003', text: 'Ampliación de instalaciones y dique seco.' },
+      { year: '2015', text: 'Primera entrega de un buque tanque de gran porte.' },
+      { year: '2024', text: 'Más de 120 buques construidos y 480 reparaciones.' },
+    ],
+    certifications: ['ISO 9001', 'Bureau Veritas', 'Lloyd’s Register', 'RINA', 'ABS'],
+  },
 };

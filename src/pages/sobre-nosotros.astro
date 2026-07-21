@@ -1,0 +1,68 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import { site } from '../config/site';
+import instalaciones from '../assets/about-instalaciones.jpg';
+
+const { about } = site;
+---
+
+<Layout title="Sobre nosotros — Atlantic Marine">
+  <main class="mx-auto max-w-6xl px-6 pb-28 pt-32 sm:pt-40">
+    <!-- Cabecera + entradilla -->
+    <p class="text-xs uppercase tracking-[0.25em] text-accent">Sobre nosotros</p>
+    <h1 class="mt-4 max-w-3xl text-4xl font-semibold leading-tight tracking-tight sm:text-5xl">
+      {about.headline}
+    </h1>
+    <p class="mt-6 max-w-2xl text-lg leading-relaxed text-steel">{about.lead}</p>
+
+    <!-- Historia: foto de instalaciones + texto -->
+    <section class="mt-24 grid items-center gap-10 sm:mt-28 sm:grid-cols-2 sm:gap-16">
+      <div class="overflow-hidden rounded-xl border border-line shadow-lg shadow-black/30">
+        <Image
+          src={instalaciones}
+          alt="Instalaciones del astillero Atlantic Marine"
+          class="aspect-[3/2] w-full object-cover"
+        />
+      </div>
+      <div>
+        <h2 class="text-2xl font-semibold tracking-tight sm:text-3xl">Nuestra historia</h2>
+        {about.history.map((p) => <p class="mt-4 leading-relaxed text-steel">{p}</p>)}
+      </div>
+    </section>
+
+    <!-- Hitos -->
+    <section class="mt-24 sm:mt-28">
+      <h2 class="text-2xl font-semibold tracking-tight sm:text-3xl">Hitos</h2>
+      <div class="mt-10 grid grid-cols-1 gap-px overflow-hidden rounded-lg border border-line bg-line sm:grid-cols-2 lg:grid-cols-4">
+        {
+          about.milestones.map((m) => (
+            <div class="bg-ink p-6">
+              <p class="text-3xl font-semibold tracking-tight text-fog">{m.year}</p>
+              <p class="mt-2 text-sm leading-relaxed text-steel">{m.text}</p>
+            </div>
+          ))
+        }
+      </div>
+    </section>
+
+    <!-- Certificaciones y clasificadoras -->
+    <section class="mt-24 sm:mt-28">
+      <p class="text-xs uppercase tracking-[0.25em] text-accent">Confianza</p>
+      <h2 class="mt-4 text-2xl font-semibold tracking-tight sm:text-3xl">
+        Certificaciones y clasificadoras
+      </h2>
+      <div class="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
+        {
+          about.certifications.map((c) => (
+            <div class="flex h-24 items-center justify-center rounded-lg border border-line bg-surface px-4 text-center">
+              <span class="text-sm font-medium uppercase tracking-wide text-steel">
+                {c}
+              </span>
+            </div>
+          ))
+        }
+      </div>
+    </section>
+  </main>
+</Layout>
