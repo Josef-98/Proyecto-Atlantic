@@ -25,7 +25,7 @@ export const site = {
   // WhatsApp: INTERRUPTOR. Hoy apagado (enabled: false) y con número de ejemplo.
   // Para activarlo cuando el padre de Josef decida: poner enabled en true.
   whatsapp: {
-    enabled: false,
+    enabled: true,
     number: '582815550100', // formato wa.me: sin "+", espacios ni guiones
     message: 'Hola, me gustaría más información sobre Atlantic Marine.',
   },

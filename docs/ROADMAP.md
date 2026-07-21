@@ -8,17 +8,16 @@
 **Fase A — Home completa (contenido de ejemplo)** ← en curso
 Montar todas las secciones de la home con contenido falso nuestro.
 
-**Fase B — Sitio navegable** ← en curso
-Crear las páginas del menú (Servicios · Flota · Sobre nosotros · Contacto) para que
-no den 404. Menú hamburguesa (móvil) + botón flotante de WhatsApp (apagado).
+**Fase B — Sitio navegable** ✅ COMPLETA
+Todas las páginas del menú creadas (sin 404), menú móvil y WhatsApp listos.
 
 Progreso:
 - `/flota` ✅ (catálogo; cada buque abre su ficha en un modal centrado)
 - `/servicios` ✅ (servicios detallados, filas alternadas, fotos enmarcadas)
-- `/sobre-nosotros` ⬜
-- `/contacto` ⬜ (con el mapa)
-- Menú hamburguesa (móvil) ⬜
-- Botón flotante de WhatsApp ⬜
+- `/sobre-nosotros` ✅ (historia, hitos, certificaciones)
+- `/contacto` ✅ (datos + mapa de Google incrustado)
+- Menú hamburguesa (móvil) ✅
+- Botón flotante de WhatsApp ✅ (interruptor en site.ts, encendido en la demo)
 
 **Fase C — Pulir y publicar**
 Repaso de diseño, accesibilidad y responsive. Deploy en Vercel. Después, sustituir
@@ -42,5 +41,8 @@ Idea: alternar estilos (foto → barcos → iconos → foto) para que no se sien
   zona general (Ciudad Ojeda, Estado Zulia) como contexto rápido, pero no la calle. El
   mapa se monta en Fase B; evaluar incrustado vs. versión ligera.
 - **Versión móvil / responsive:** pasada dedicada + menú hamburguesa (Fase C).
-- **WhatsApp:** interruptor en `src/config/site.ts`, hoy apagado; se decide con el
-  padre de Josef.
+- **WhatsApp:** interruptor en `src/config/site.ts`, hoy **encendido** con número de
+  ejemplo para la demo; si el padre de Josef no lo quiere, se apaga (`enabled: false`).
+- **Google Business Profile (futuro):** registrar la empresa en google.com/business
+  para que aparezca en Google Maps al buscar el nombre. Es externo a la web; después
+  se puede enlazar el perfil desde Contacto.
