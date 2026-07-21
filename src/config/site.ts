@@ -13,6 +13,15 @@ export const site = {
     href: 'tel:+582815550100',
   },
 
+  // Email de contacto (ejemplo).
+  email: {
+    display: 'contacto@atlantic-marine.com',
+    href: 'mailto:contacto@atlantic-marine.com',
+  },
+
+  // Dirección completa (contenido de ejemplo). Se usa en Contacto y en su mapa.
+  address: 'Calle Montpellier 1, Ciudad Ojeda, Estado Zulia',
+
   // WhatsApp: INTERRUPTOR. Hoy apagado (enabled: false) y con número de ejemplo.
   // Para activarlo cuando el padre de Josef decida: poner enabled en true.
   whatsapp: {

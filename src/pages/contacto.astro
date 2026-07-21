@@ -1,0 +1,65 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { site } from '../config/site';
+
+// Consulta para el mapa incrustado de Google (no necesita clave de API).
+const mapQuery = encodeURIComponent(site.address);
+const mapSrc = `https://www.google.com/maps?q=${mapQuery}&output=embed`;
+---
+
+<Layout title="Contacto — Atlantic Marine">
+  <main class="mx-auto max-w-6xl px-6 pb-28 pt-32 sm:pt-40">
+    <p class="text-xs uppercase tracking-[0.25em] text-accent">Contacto</p>
+    <h1 class="mt-4 text-4xl font-semibold tracking-tight sm:text-5xl">
+      Hablemos de tu proyecto
+    </h1>
+    <p class="mt-6 max-w-2xl text-lg leading-relaxed text-steel">
+      Cuéntanos qué necesitas — construcción, reparación o mantenimiento — y te
+      respondemos lo antes posible.
+    </p>
+
+    <div class="mt-16 grid gap-12 lg:grid-cols-2">
+      <!-- Datos de contacto -->
+      <dl class="space-y-8">
+        <div>
+          <dt class="text-xs uppercase tracking-[0.2em] text-steel">Teléfono</dt>
+          <dd class="mt-2">
+            <a
+              href={site.phone.href}
+              class="text-lg text-fog transition-colors hover:text-accent"
+            >
+              {site.phone.display}
+            </a>
+          </dd>
+        </div>
+        <div>
+          <dt class="text-xs uppercase tracking-[0.2em] text-steel">Email</dt>
+          <dd class="mt-2">
+            <a
+              href={site.email.href}
+              class="text-lg text-fog transition-colors hover:text-accent"
+            >
+              {site.email.display}
+            </a>
+          </dd>
+        </div>
+        <div>
+          <dt class="text-xs uppercase tracking-[0.2em] text-steel">Dirección</dt>
+          <dd class="mt-2 text-lg text-fog">{site.address}</dd>
+        </div>
+      </dl>
+
+      <!-- Mapa -->
+      <div class="overflow-hidden rounded-xl border border-line">
+        <iframe
+          title="Ubicación de Atlantic Marine en Google Maps"
+          src={mapSrc}
+          class="h-full min-h-[340px] w-full"
+          style="border: 0;"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </div>
+  </main>
+</Layout>
